@@ -131,6 +131,7 @@ scripts/                   Cluster jobs and utilities, see scripts/README.md
 docs/
   ARCHITECTURE.md          Network design: router, experts, binarization
   PIPELINE.md              Data flow: download -> simulate -> folds -> train
+  TRAINING.md              Optimizer, schedule, stopping rule, seeds, versions
   EXPERIMENTS.md           Why each experiment is designed the way it is
   RESULTS.md               Full results, per-fold tables, honest limitations
   GENOME_INVENTORY.txt     Every accession used, by class and fold

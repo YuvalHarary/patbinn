@@ -181,7 +181,7 @@ def test_paths_referenced_by_docs_exist():
         "data/manifests/cv_sample_manifest.csv",
         "data/manifests/genome_manifest_multi.csv",
         "docs/ARCHITECTURE.md", "docs/PIPELINE.md", "docs/EXPERIMENTS.md",
-        "docs/RESULTS.md", "docs/GENOME_INVENTORY.txt",
+        "docs/RESULTS.md", "docs/TRAINING.md", "docs/GENOME_INVENTORY.txt",
         "data/README.md", "results/README.md", "scripts/README.md",
         "scripts/make_genome_inventory.py",
     ]
