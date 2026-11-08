@@ -18,7 +18,7 @@ k-mer vectors -> router + experts (or flat) <- train_moe.py / train_flat.py
 per-fold results -> aggregate_cv_results.py -> results/cv_*/
 ```
 
-The dataset this produces: **543 genomes, 58 classes, 8 families**, 3 to 10
+The dataset this produces: **542 genomes, 58 classes, 8 families**, 3 to 10
 independent isolates per class. Every accession actually used is listed in
 [GENOME_INVENTORY.txt](GENOME_INVENTORY.txt), which is regenerated from the
 manifest by `scripts/make_genome_inventory.py`.

@@ -7,7 +7,8 @@
     128
   ],
   "val_acc": 57.76084046653562,
-  "per_read_leaf_acc": 46.06300541566449,
-  "sample_leaf_acc": 88.78787878787878,
-  "n_test_samples": 660
+  "per_read_leaf_acc": 46.19448801169074,
+  "sample_leaf_acc": 89.60244648318043,
+  "n_test_samples": 654,
+  "note": "test-side metrics re-evaluated after removing the mislabelled duplicate genome NC_024781.1 from the test set (654 samples)"
 }

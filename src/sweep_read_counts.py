@@ -21,12 +21,15 @@ def main():
     parser.add_argument("--checkpoints_dir", default="checkpoints/cv")
     parser.add_argument("--manifests_dir", default="data/manifests")
     parser.add_argument("--k_folds", type=int, default=5)
+    parser.add_argument("--folds", default=None,
+                        help="comma-separated subset of folds to sweep, e.g. 1; default all")
     parser.add_argument("--vote_counts", type=int, nargs="+", default=DEFAULT_VOTE_COUNTS)
     parser.add_argument("--out_csv", default="results/read_count_sweep.csv")
     args = parser.parse_args()
 
     rows_out = []
-    for fold in range(args.k_folds):
+    folds = [int(f) for f in args.folds.split(",")] if args.folds else range(args.k_folds)
+    for fold in folds:
         ckpt_path = os.path.join(args.checkpoints_dir, f"fold{fold}.pth")
         manifest_path = os.path.join(args.manifests_dir, f"cv_fold{fold}_sample_manifest.csv")
         if not (os.path.exists(ckpt_path) and os.path.exists(manifest_path)):

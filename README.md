@@ -6,7 +6,7 @@ two-stage **Mixture-of-Experts** design (a family router, then one of 8
 per-family variant experts) instead of one flat 58-way classifier.
 
 Every number in this repository comes from **genome-level 5-fold
-cross-validation** on 543 real NCBI isolates: whole genomes are withheld from
+cross-validation** on 542 real NCBI isolates: whole genomes are withheld from
 training, never merely some of their reads. A model is only ever tested on
 viruses whose genome it has never seen.
 
@@ -115,7 +115,9 @@ src/                       Model, training, evaluation and experiment drivers
     sweep_error_rates.py   Robustness to injected substitution error
     run_encoding_experiment.py   One input-encoding variant (k, canonical, width)
     compare_kraken2.py     Kraken2 baseline: build database, run matched sweep
-    plot_results.py        Figures (colourblind-safe palette)
+    eval_perread_leaf.py   Pipeline-mode per-read accuracy, per-class metrics, confusion
+    plot_results.py        Diagnostic figures (colourblind-safe palette)
+    plot_paper_figures.py  The paper's five results figures, from the result CSVs
 
 data/                      Dataset construction and the manifests
   download_genomes.py      NCBI multi-isolate downloader (+ fold assignment)
@@ -132,6 +134,7 @@ docs/
   ARCHITECTURE.md          Network design: router, experts, binarization
   PIPELINE.md              Data flow: download -> simulate -> folds -> train
   TRAINING.md              Optimizer, schedule, stopping rule, seeds, versions
+  TAXONOMY.md              The 58 classes, their accessions, what a variant is
   EXPERIMENTS.md           Why each experiment is designed the way it is
   RESULTS.md               Full results, per-fold tables, honest limitations
   GENOME_INVENTORY.txt     Every accession used, by class and fold

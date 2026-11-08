@@ -193,7 +193,6 @@ Filoviridae,2,Ebola-Reston,4,Reston ebolavirus,,1199302472,18868,"KY798011.1 Res
 Filoviridae,2,Ebola-Reston,4,Reston ebolavirus,,1199302463,18879,"KY798010.1 Reston ebolavirus isolate PHL_A_2008_(811411), complete genome",data/refs/Filoviridae/Ebola-Reston/isolate_8.fasta,,8,3
 Filoviridae,2,Ebola-Reston,4,Reston ebolavirus,,1199302454,18879,"KY798009.1 Reston ebolavirus isolate USA_TX_1996_(807334), complete genome",data/refs/Filoviridae/Ebola-Reston/isolate_9.fasta,,9,4
 Filoviridae,2,Marburg,5,Marburg marburgvirus,,2972135382,19112,"NC_001608.4 Marburg virus - Musoke, Kenya, 1980, complete genome",data/refs/Filoviridae/Marburg/isolate_0.fasta,,0,0
-Filoviridae,2,Marburg,5,Marburg marburgvirus,,678222041,19114,"NC_024781.1 Marburg marburgvirus isolate Ravn virus/H.sapiens-tc/KEN/1987/Kitum Cave-810040, complete genome",data/refs/Filoviridae/Marburg/isolate_1.fasta,,1,1
 Filoviridae,2,Marburg,5,Marburg marburgvirus,,3062941051,19112,"PX278686.1 Orthomarburgvirus marburgense strain Marburg virus/H. sapiens-tc/KEN/Mt. Elgon-Musoke F3, complete genome",data/refs/Filoviridae/Marburg/isolate_2.fasta,,2,2
 Filoviridae,2,Marburg,5,Marburg marburgvirus,,3062941043,19113,"PX278685.1 Orthomarburgvirus marburgense strain Marburg virus/H.sapien-tc/ANG/2004/Angola325, complete genome",data/refs/Filoviridae/Marburg/isolate_3.fasta,,3,3
 Filoviridae,2,Marburg,5,Marburg marburgvirus,,777861532,19113,"KP985768.1 Marburg marburgvirus isolate Marburg virus/H. sapiens-tc/UGA/2014/Kampala-812601, complete genome",data/refs/Filoviridae/Marburg/isolate_4.fasta,,4,4

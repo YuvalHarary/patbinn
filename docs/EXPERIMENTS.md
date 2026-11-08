@@ -64,9 +64,9 @@ leakage-prevention mechanics.
 | Paramyxoviridae | 8 | 80 | 10-10 | n/a |
 | Herpesviridae | 8 | 76 | 6-10 | HHV-6B (6) |
 | Hepadnaviridae | 8 | 71 | 3-10 | HBV-genotype-F (3) |
-| Filoviridae | 8 | 65 | 3-10 | Ebola-TaiForest (3) |
+| Filoviridae | 8 | 64 | 3-10 | Ebola-TaiForest (3) |
 | Retroviridae | 3 | 21 | 4-10 | HIV-1-subtype-C (4) |
-| **Total** | **58** | **543** | **3-10** (mean 9.4) | |
+| **Total** | **58** | **542** | **3-10** (mean 9.3) | |
 
 **Every class is backed by at least 3 independent isolates**, so every class
 receives a genuine held-out-genome test. This was not always true, see below.
@@ -83,7 +83,7 @@ oracle accuracy around 50% against 93-98% elsewhere.
 
 That was never a pipeline bug: it was a data-availability limit, and it was
 fixed at the source by repairing the two retrieval bugs described in
-[PIPELINE.md](PIPELINE.md). With 543 genomes and a minimum of 3 isolates per
+[PIPELINE.md](PIPELINE.md). With 542 genomes and a minimum of 3 isolates per
 class, **the effect is gone**: fold 0 now scores 100% at the specimen level,
 and the spread across folds is ±1.02 points rather than ±6.7.
 
@@ -165,7 +165,7 @@ what each file contains.
 | Error-rate sweep, fold-1 (for Kraken2) | fold 1 | `patbinn_fold1_error_sweep.csv` |
 | Error-rate sweep, canonical encoding | fold 1 | `canonical_fold1_error_sweep.csv` |
 | Kraken2 baseline | fold 1 | `kraken2_error_sweep.csv`, `kraken2_sample_acc_normalized.csv` |
-| Final deployable model (543 isolates, no holdout) | n/a | `checkpoints/final/moe_final_1024x128.pth` |
+| Final deployable model (all isolates, no holdout) | n/a | `checkpoints/final/moe_final_1024x128.pth` |
 
 Remaining open directions, in rough order of value:
 

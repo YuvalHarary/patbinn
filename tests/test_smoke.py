@@ -159,7 +159,7 @@ def test_dataset_shape_matches_docs():
     genomes = _rows("data/manifests/genome_manifest_multi.csv")
     classes = {(r["family"], r["variant"]) for r in genomes}
     families = {r["family"] for r in genomes}
-    assert len(genomes) == 543, f"docs say 543 genomes, manifest has {len(genomes)}"
+    assert len(genomes) == 542, f"docs say 542 genomes, manifest has {len(genomes)}"
     assert len(classes) == 58, f"docs say 58 classes, manifest has {len(classes)}"
     assert len(families) == 8, f"docs say 8 families, manifest has {len(families)}"
 
@@ -181,7 +181,8 @@ def test_paths_referenced_by_docs_exist():
         "data/manifests/cv_sample_manifest.csv",
         "data/manifests/genome_manifest_multi.csv",
         "docs/ARCHITECTURE.md", "docs/PIPELINE.md", "docs/EXPERIMENTS.md",
-        "docs/RESULTS.md", "docs/TRAINING.md", "docs/GENOME_INVENTORY.txt",
+        "docs/RESULTS.md", "docs/TRAINING.md", "docs/TAXONOMY.md",
+        "docs/GENOME_INVENTORY.txt",
         "data/README.md", "results/README.md", "scripts/README.md",
         "scripts/make_genome_inventory.py",
     ]

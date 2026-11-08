@@ -36,11 +36,16 @@ Aggregated by `src/aggregate_cv_results.py`. Metric columns:
 |---|---|
 | `router_sweep.csv` | 8 router shapes, 1-3 hidden layers. Experts held fixed, so only router capacity varies. |
 | `expert_sweep.csv` | 8 expert shapes, 1-2 hidden layers. Router held fixed. |
+| `cv_perread_leaf.csv` | Pipeline-mode per-read accuracy per fold: each read routed by the router's own prediction, family and variant both required. The number comparable to the flat baseline. |
+| `cv_class_metrics.csv` | Precision, recall and F1 per leaf class, pooled over the five folds. |
+| `cv_family_confusion.csv`, `cv_family_readcounts.csv` | Family-level read confusion and held-out reads per family, pooled over folds. |
+| `f32_perread/` | The same four files for the float32 counterpart. |
+| `encoding_table.csv` | The four encodings in the layout `plot_paper_figures.py` reads. |
 | `encoding_variants.csv` | Input encodings: k=4/5/6, canonical on/off. Each row is a full retrain. Where a label appears twice, the **last** row is current. |
 | `read_count_sweep.csv` | Specimen accuracy vs number of reads voted (1-1000). Covers **all five folds**. |
 | `error_rate_sweep.csv` | Injected substitution error 0-10%, **fold 4**. |
 
-## Kraken2 comparison (fold 1, 660 specimens)
+## Kraken2 comparison (fold 1, 654 specimens)
 
 | File | Contents |
 |---|---|
@@ -81,7 +86,8 @@ Two retrieval bugs in `data/download_genomes.py` were fixed partway through the
 project, and every result was re-run on the corrected dataset. Results produced
 before that fix have been removed rather than kept alongside the current ones,
 because the two are not comparable and mixing them is how wrong numbers end up
-in a paper. Anything here is from the corrected 543-genome dataset.
+in a paper. Anything here is from the corrected dataset: 542 genomes after the
+removal of one duplicated, mislabelled genome (see `docs/RESULTS.md`).
 
-The current test-set sizes are 678 / 660 / 654 / 636 / 630 specimens for folds
-0-4; a file reporting any other count is from the superseded dataset.
+The current test-set sizes are 678 / 654 / 654 / 636 / 630 specimens for folds
+0-4; a file reporting any other count is from a superseded dataset.

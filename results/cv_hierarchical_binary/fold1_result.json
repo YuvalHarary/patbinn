@@ -20,11 +20,13 @@
     "Picornaviridae": 88.67067458304741,
     "Paramyxoviridae": 99.64396577037627
   },
-  "per_read_router_acc": 97.37410874022925,
-  "per_read_expert_acc_oracle": 93.96674722097157,
+  "per_read_router_acc": 97.36549751351993,
+  "per_read_expert_acc_oracle": 94.47988515774796,
   "sample_family_acc": 100.0,
-  "sample_variant_acc_given_correct_routing": 97.72727272727273,
-  "sample_leaf_acc_pipeline": 97.72727272727273,
-  "sample_variant_acc_oracle": 97.72727272727273,
-  "n_test_samples": 660
+  "sample_variant_acc_given_correct_routing": 98.62385321100918,
+  "sample_leaf_acc_pipeline": 98.62385321100918,
+  "sample_variant_acc_oracle": 98.62385321100918,
+  "n_test_samples": 654,
+  "per_read_leaf_acc": 92.35917076857403,
+  "note": "test-side metrics re-evaluated after removing the mislabelled duplicate genome NC_024781.1 from the test set (654 samples); training-side fields are from the original run"
 }

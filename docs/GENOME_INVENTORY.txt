@@ -1,13 +1,13 @@
 PatBiNN - Genome Inventory
 ======================================================================
-Generated:  2026-09-11
+Generated:  2026-11-08
 Source:     data/manifests/genome_manifest_multi.csv
 Regenerate: python3 scripts/make_genome_inventory.py
 
-Total genomes:  543
+Total genomes:  542
 Total classes:  58  (family/variant pairs)
 Families:       8
-Isolates/class: min 3, max 10, mean 9.4
+Isolates/class: min 3, max 10, mean 9.3
 
 All genomes were retrieved from the NCBI nucleotide database via
 data/download_genomes.py, using organism- and length-band-constrained
@@ -359,7 +359,7 @@ so each class receives a genuine held-out-genome test in every fold.
           Japanese encephalitis virus strain P22-02131-92/QLD/22, complete genome
 
 
-## Filoviridae  (8 variants, 65 genomes)
+## Filoviridae  (8 variants, 64 genomes)
 ----------------------------------------------------------------------
   Ebola-Zaire  (10 isolates)
     [0] fold=0  NC_002549.1      18959 bp  uid=10313991
@@ -457,11 +457,9 @@ so each class receives a genuine held-out-genome test in every fold.
     [9] fold=4  KY798009.1       18879 bp  uid=1199302454
           Reston ebolavirus isolate USA_TX_1996_(807334), complete genome
 
-  Marburg  (10 isolates)
+  Marburg  (9 isolates)
     [0] fold=0  NC_001608.4      19112 bp  uid=2972135382
           Marburg virus - Musoke, Kenya, 1980, complete genome
-    [1] fold=1  NC_024781.1      19114 bp  uid=678222041
-          Marburg marburgvirus isolate Ravn virus/H.sapiens-tc/KEN/1987/Kitum Cave-810040, complete genome
     [2] fold=2  PX278686.1       19112 bp  uid=3062941051
           Orthomarburgvirus marburgense strain Marburg virus/H. sapiens-tc/KEN/Mt. Elgon-Musoke F3, complete genome
     [3] fold=3  PX278685.1       19113 bp  uid=3062941043

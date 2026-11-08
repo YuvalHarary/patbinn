@@ -1,0 +1,7 @@
+metric,correct,wrong
+mean_decision_margin,48.300835,14.065789
+mean_read_gc,0.451567,0.411882
+mean_distinct_vocab_kmers,129.748177,130.168860
+n_reads,30176,1824
+read_routing_accuracy_pct,94.3000,
+pearson_gcdist_vs_confusion,-0.038364,
