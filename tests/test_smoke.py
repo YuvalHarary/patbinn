@@ -42,6 +42,7 @@ MODULES = [
     "sweep_architecture", "sweep_cross_combos", "sweep_error_rates",
     "sweep_experts", "sweep_read_counts", "sweep_router",
     "compare_kraken2", "plot_results",
+    "explain_router", "abstain_router", "compare_shap_runs",
 ]
 
 # Result files and the metric columns that must be fully populated.

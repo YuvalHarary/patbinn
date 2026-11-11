@@ -44,6 +44,10 @@ Aggregated by `src/aggregate_cv_results.py`. Metric columns:
 | `encoding_variants.csv` | Input encodings: k=4/5/6, canonical on/off. Each row is a full retrain. Where a label appears twice, the **last** row is current. |
 | `read_count_sweep.csv` | Specimen accuracy vs number of reads voted (1-1000). Covers **all five folds**. |
 | `error_rate_sweep.csv` | Injected substitution error 0-10%, **fold 4**. |
+| `router_shap.csv`, `router_shap_mi.csv`, `router_shap_matrix.csv` | Shapley attribution of the fold-1 router (`src/explain_router.py`, seed 0): 480 reads drawn from all held-out samples, 2,048 permutations per read. Top k-mers per family, attribution against mutual information over a balanced pool of 40,000 reads, and the full family by k-mer matrix. |
+| `router_shap_stats.csv` | Median and maximum attribution at 32, 128, 512 and 2,048 permutations. Mean absolute attribution is inflated by sampling noise at low counts. |
+| `router_shap_matrix_seed1.csv`, `router_shap_agreement.csv` | An independent run with seed 1, and its agreement with seed 0 (`src/compare_shap_runs.py`): Spearman 0.907 over the 1,024 k-mers. |
+| `router_abstention.csv`, `router_abstention_fractions.csv`, `router_margin.csv` | Router decision margin over all 4,183,826 held-out reads of fold 1 (`src/abstain_router.py`): accuracy on the reads kept and errors removed, by margin threshold and at fixed fractions withheld, and margin statistics for correct and misrouted reads. |
 
 ## Kraken2 comparison (fold 1, 654 specimens)
 

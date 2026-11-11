@@ -80,6 +80,10 @@ error is within-family variant confusion, concentrated in fold 1.
 existing checkpoint, so expert quality is held fixed and only the router
 varies.*
 
+The sweep trains every row, including `1024×128`. The paper's table reports
+the fold-1 cross-validation model of section 1 in that row (97.37% per read);
+this file holds the sweep's own training of the same shape (97.11%).
+
 | Router shape | Layers | Parameters | Per-read family | Specimen-level |
 |---|---|---|---|---|
 | 64 | 1 | 66,305 | 70.16% | 81.04% |
@@ -96,7 +100,7 @@ single-hidden-layer shape reaches any two-layer shape at the specimen level,
 and the best one-layer router (512, at 530k parameters) is beaten by the
 smallest two-layer router (128×64, at 141k), a quarter of the parameters.
 
-**Beyond two layers buys nothing.** A third hidden layer adds 0.87 points per
+**Beyond two layers buys nothing.** A third hidden layer adds 0.88 points per
 read and exactly zero at the specimen level, for 460k additional parameters.
 
 **Specimen-level accuracy saturates long before per-read accuracy does.**
@@ -111,6 +115,10 @@ alone would be sized far larger than the task actually needs.
 
 *Source: `results/expert_sweep.csv` (fold 1). The router is held fixed, so only
 expert capacity varies.*
+
+As in section 2, the paper's table reports the fold-1 cross-validation model
+in the `1024×128` row (94.48% per read, 98.62% per specimen); this file holds
+the sweep's own training of the same shape (89.87%, 99.85%).
 
 | Expert shape | Layers | Parameters (all 8) | Per-read variant (oracle) | Specimen-level |
 |---|---|---|---|---|

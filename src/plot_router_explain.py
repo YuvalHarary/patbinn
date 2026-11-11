@@ -162,10 +162,19 @@ def plot_validation(mi_rows, matrix_rows, refs_dir, out_path, label_top=6):
         r_p = pearson(xs, ys)
         axr.scatter(xs, ys, s=46, color=COLOR_HI, linewidth=0, zorder=3)
         xmid = (min(xs) + max(xs)) / 2
+        # Labels sit on the side of the point facing the middle of the axis.
+        # Two points on the same side whose GC values are close would have
+        # their labels collide, so each such pair is pushed apart vertically.
+        nudge = {nm: 0.0 for nm in names}
+        pts = sorted(zip(ys, xs, names))
+        for (ya, xa, na), (yb, xb, nb) in zip(pts, pts[1:]):
+            if (xa > xmid) == (xb > xmid) and yb - ya < 0.035:
+                nudge[na] -= 5.0
+                nudge[nb] += 5.0
         for x, y, nm in zip(xs, ys, names):
             right = x > xmid
             axr.annotate(display(nm), (x, y), textcoords="offset points",
-                         xytext=(-6 if right else 6, -3),
+                         xytext=(-6 if right else 6, -3 + nudge[nm]),
                          ha="right" if right else "left",
                          fontsize=9, color=COLOR_MUTED)
         lo, hi = min(xs + ys) - 0.03, max(xs + ys) + 0.03

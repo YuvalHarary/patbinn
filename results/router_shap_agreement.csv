@@ -1,0 +1,10 @@
+run_a,run_b,family,spearman,top20_shared
+results/router_shap_matrix.csv,results/router_shap_matrix_seed1.csv,Coronaviridae,0.8718,13
+results/router_shap_matrix.csv,results/router_shap_matrix_seed1.csv,Flaviviridae,0.8534,14
+results/router_shap_matrix.csv,results/router_shap_matrix_seed1.csv,Filoviridae,0.8035,14
+results/router_shap_matrix.csv,results/router_shap_matrix_seed1.csv,Hepadnaviridae,0.8562,14
+results/router_shap_matrix.csv,results/router_shap_matrix_seed1.csv,Retroviridae,0.8727,11
+results/router_shap_matrix.csv,results/router_shap_matrix_seed1.csv,Herpesviridae,0.8135,9
+results/router_shap_matrix.csv,results/router_shap_matrix_seed1.csv,Picornaviridae,0.8559,13
+results/router_shap_matrix.csv,results/router_shap_matrix_seed1.csv,Paramyxoviridae,0.8363,11
+results/router_shap_matrix.csv,results/router_shap_matrix_seed1.csv,global,0.9073,

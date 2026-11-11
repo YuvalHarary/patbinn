@@ -161,9 +161,8 @@ artifact, and every accuracy figure in [RESULTS.md](RESULTS.md) can be
 recomputed from them. Seeding the training path is a known gap rather than a
 deliberate choice.
 
-Two scripts that *do* seed, because their sampling is the measurement rather
-than an incidental detail, are `src/explain_router.py` (`--seed`, default 0)
-and `src/sweep_maj_and.py`.
+One script that *does* seed, because its sampling is the measurement rather
+than an incidental detail, is `src/explain_router.py` (`--seed`, default 0).
 
 ## Software environment
 

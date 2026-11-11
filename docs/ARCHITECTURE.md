@@ -36,7 +36,7 @@ Coronaviridae variant using the same weights it uses to separate two
 Coronaviridae variants from each other, two very different scales of k-mer
 similarity entangled in one classifier. Splitting the problem lets the router
 specialize on coarse family-level signal and each expert on fine within-family
-signal. The measured gap is large: 99.55% vs 88.78% specimen-level
+signal. The measured gap is large: 99.72% vs 88.94% specimen-level
 (see [RESULTS.md](RESULTS.md#1-main-cross-validation-result)).
 
 `src/moe_model.py`'s `build_moe()` constructs the router and the list of 8 experts;
@@ -72,8 +72,8 @@ and is switched off for the float32 control, where it would otherwise act as an
 uncontrolled extra regularizer and confound the comparison.
 
 **Measured cost of binarization: 0.18 points** at the specimen level
-(99.55% vs 99.73%). Per read the penalty is real and much larger
-(91.81% vs 98.76% oracle-routed); majority voting absorbs nearly all of it.
+(99.72% vs 99.91%). Per read the penalty is real and much larger
+(90.09% vs 98.60% in pipeline mode); majority voting absorbs nearly all of it.
 
 ## Input representation: bag-of-k-mers
 
@@ -104,7 +104,7 @@ Passing `--canonical` emits `min(kmer, revcomp(kmer))` instead. Odd `k` admits
 no self-complementary k-mer, so the 1024 5-mers map onto exactly 512 with no
 collisions. This **halves the input width and removes 44% of the classifier's
 parameters** (10.67M → 5.95M) while *improving* specimen-level accuracy
-(97.73% → 98.33%). See
+(98.62% → 99.24%). See
 [RESULTS.md](RESULTS.md#4-input-encoding).
 
 Two properties of the implementation matter and must not be undone:
@@ -125,7 +125,7 @@ for the router and that family's variant count for an expert.
 **Two hidden layers, not one.** No single-hidden-layer router reaches any
 two-layer router at the specimen level, and the best one-layer shape (512, 530k
 parameters) is beaten by the smallest two-layer shape (128×64, 141k), a
-quarter of the parameters. A third layer adds 0.86 points per read and nothing
+quarter of the parameters. A third layer adds 0.88 points per read and nothing
 per specimen.
 
 Router and expert sizes were swept **independently** (`src/sweep_router.py`,

@@ -42,7 +42,7 @@ These record *which actual genomes were retrieved*, one row per isolate.
 
 | File | Rows | What it is |
 |---|---|---|
-| `genome_manifest_multi.csv` | 543 | **The genome record for every result in this repository.** 58 classes × 3-10 independent isolates, each with its CV fold. |
+| `genome_manifest_multi.csv` | 542 | **The genome record for every result in this repository.** 58 classes × 3-10 independent isolates, each with its CV fold. |
 | `genome_manifest.csv` | 64 | The original one-genome-per-class record from the superseded single-genome experiment. |
 
 Key columns beyond the class definition: `accession` (NCBI UID), `length`,
@@ -63,10 +63,10 @@ These record *which simulated read sets exist*, one row per replicate.
 
 | File | Rows | What it is |
 |---|---|---|
-| `cv_sample_manifest.csv` | 3,258 | **The main sample manifest.** 543 isolates × 6 ART replicates. Input to `src/run_cv.py`. |
-| `final_train_manifest.csv` | 3,258 | The same samples with a `split` column for the no-holdout final model (`src/train_final_model.py`). |
-| `cv_fold0_sample_manifest.csv` | 2,484 | Fold 0's materialized train/val/test split. |
-| `cv_fold1_sample_manifest.csv` | 2,982 | Fold 1's materialized split: the one every single-fold sweep and the Kraken2 comparison use. |
+| `cv_sample_manifest.csv` | 3,252 | **The main sample manifest.** 542 isolates × 6 ART replicates. Input to `src/run_cv.py`. |
+| `final_train_manifest.csv` | 3,252 | The same samples with a `split` column for the no-holdout final model (`src/train_final_model.py`). |
+| `cv_fold0_sample_manifest.csv` | 3,252 | Fold 0's materialized train/val/test split. |
+| `cv_fold1_sample_manifest.csv` | 3,252 | Fold 1's materialized split: the one every single-fold sweep and the Kraken2 comparison use. |
 | `sample_manifest.csv` | 384 | Sample manifest from the superseded single-genome experiment. |
 
 Columns: `sample_id, family, family_idx, variant, variant_idx, isolate_idx,

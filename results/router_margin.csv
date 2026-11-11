@@ -1,0 +1,5 @@
+metric,correct,misrouted
+n_reads,4073603,110223
+mean_decision_margin,51.6405,11.4361
+median_decision_margin,54.0000,8.0000
+mean_distinct_vocab_kmers,128.2062,130.5112
